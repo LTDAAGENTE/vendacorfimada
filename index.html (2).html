@@ -27,6 +27,21 @@
       font-size: 16px;
       margin-top: 20px;
     }
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 25px;
+      background-color: #ff007f;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #cc0066;
+    }
   </style>
 
   <!-- Facebook Pixel Code -->
@@ -42,7 +57,7 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '2926269297544422');
-      fbq('track', 'Purchase', {value: 1.00, currency: 'BRL'});
+      fbq('track', 'Purchase', {value: 25.00, currency: 'BRL'});
       localStorage.setItem('purchaseTracked', 'true');
     }
   </script>
@@ -57,6 +72,7 @@
     <h1>Compra Confirmada!</h1>
     <p>Obrigado por sua compra. Seu acesso já foi liberado.</p>
     <p>Verifique seu e-mail ou aguarde as próximas instruções.</p>
+    <a class="btn" href="https://t.me/+vujs9983iZcxOGQx" target="_blank">Entrar no Canal VIP</a>
   </div>
 </body>
 </html>
