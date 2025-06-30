@@ -50,7 +50,7 @@
     }
   </style>
 
-  <!-- Meta Pixel Code (PageView Always) -->
+  <!-- Facebook Pixel Code for Purchase only once -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -60,22 +60,19 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1062825638643619');
-    fbq('track', 'PageView');
+    fbq('init', '2926269297544422');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=1062825638643619&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
-
-  <!-- Facebook Pixel Purchase (only once) -->
   <script>
     if (!localStorage.getItem('purchaseTracked')) {
       fbq('track', 'Purchase', {value: 15.00, currency: 'BRL'});
       localStorage.setItem('purchaseTracked', 'true');
     }
   </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=2926269297544422&ev=Purchase&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 <body>
   <div class="container">
