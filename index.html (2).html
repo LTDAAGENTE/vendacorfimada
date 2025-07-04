@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obrigado Gatinho - VIP</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400;600&display=swap">
-    
-    <!-- Seu pixel de conversão aqui: -->
-    <!-- Pixel do Facebook configurado para registrar uma compra (Purchase) quando a página é visualizada (PageView), com controle de duplicatas -->
+
+    <!-- Pixel do Facebook configurado -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,35 +17,25 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      
-      fbq('init', '2926269297544422'); // Substitua por seu ID de pixel
-      
-      // Registra o PageView (visualização da página)
+
+      fbq('init', '2926269297544422'); // ID do pixel
       fbq('track', 'PageView');
 
-      // Considera que o PageView é o mesmo que uma compra (Purchase)
-      // Verifica se já registramos essa compra para evitar duplicação
       if (!localStorage.getItem('purchase_tracked')) {
         fbq('track', 'Purchase', {
-          value: 15.00, // Substitua pelo valor da compra
-          currency: 'BRL' // Substitua pela moeda (ex.: USD, BRL)
+          value: 15.00,
+          currency: 'BRL'
         });
-        // Faz uma anotação no localStorage para lembrar que já registramos a compra
         localStorage.setItem('purchase_tracked', 'true');
       }
     </script>
     <noscript>
       <img height="1" width="1" style="display:none" 
-           src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
+           src="https://www.facebook.com/tr?id=2926269297544422&ev=PageView&noscript=1"/>
     </noscript>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             height: 100vh;
             display: flex;
@@ -55,7 +45,6 @@
             font-family: 'Open Sans', sans-serif;
             overflow: hidden;
         }
-
         .popup {
             background: #1c1c1c;
             padding: 40px;
@@ -67,18 +56,10 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 77, 109, 0.1);
             animation: fadeIn 0.8s ease-out;
         }
-
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
-
         .check-icon {
             background: linear-gradient(135deg, #ff4d6d, #ff6b87);
             width: 50px;
@@ -92,19 +73,11 @@
             box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
             animation: pulse 1.5s infinite;
         }
-
         @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 20px rgba(255, 77, 109, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(255, 77, 109, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 77, 109, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 77, 109, 0); }
         }
-
         .popup h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 28px;
@@ -113,7 +86,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .popup h2 {
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
@@ -121,7 +93,6 @@
             font-weight: 400;
             color: #f0f0f0;
         }
-
         .popup p {
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
@@ -129,7 +100,6 @@
             line-height: 1.6;
             color: #d0d0d0;
         }
-
         .popup .exclusive {
             font-family: 'Poppins', sans-serif;
             font-size: 12px;
@@ -138,7 +108,6 @@
             color: #ff6b87;
             letter-spacing: 1px;
         }
-
         .popup .button {
             display: inline-block;
             background: linear-gradient(135deg, #ff4d6d, #ff6b87);
@@ -152,12 +121,10 @@
             box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
             transition: transform 0.2s, box-shadow 0.3s;
         }
-
         .popup .button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
         }
-
         .popup .support {
             font-family: 'Open Sans', sans-serif;
             font-size: 12px;
